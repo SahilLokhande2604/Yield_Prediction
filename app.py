@@ -23,7 +23,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
 
 # Load dataset
-file_path = '/content/crop_yield.csv'
+file_path = './crop_yield.csv'
 data = pd.read_csv(file_path)
 
 # Extract unique values for dropdowns
@@ -78,7 +78,7 @@ import joblib
 import requests
 
 # Load dataset
-file_path = '/content/crop_yield.csv'
+file_path = './crop_yield.csv'
 data = pd.read_csv(file_path)
 
 # Extract unique values for dropdowns
@@ -87,7 +87,7 @@ seasons = sorted(data['Season'].dropna().unique().tolist())
 states = sorted(data['State'].dropna().unique().tolist())
 
 # Load the crop-related info for recommendations
-df = pd.read_csv('/content/crop_info.csv')  # Adjust the path accordingly
+df = pd.read_csv('./crop_info.csv')  # Adjust the path accordingly
 
 # Map states to cities for weather data
 state_to_city = {
